@@ -12,9 +12,11 @@ I cleaned the data using a google Colab notebook. The original dataset was incre
 ## Data Visualizations
 
 <img width="2048" height="1710" alt="health_habits_correlation_heatmap" src="https://github.com/user-attachments/assets/2ebb543c-4c90-4a4d-8f80-42ba2f7777f2" />
+
 *Figure 1: A heatmap tracking the Pearson r correlation between lifestyle behaviors and combined overweight/obesity rates across U.S. states. Source: [CDC BRFSS Dataset via Data.gov](https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system?from_hint=eyJxIjoiTnV0cml0aW9uLCBQaHlzaWNhbCBBY3Rpdml0eSwgYW5kIE9iZXNpdHkgLSBCZWhhdmlvcmFsIFJpc2sgRmFjdG9yIFN1cnZlaWxsYW5jZSBTeXN0ZW0iLCJzb3J0IjoicmVsZXZhbmNlIn0%3D).*
 
 <img width="1702" height="1484" alt="top_and_bottom_states_obesity" src="https://github.com/user-attachments/assets/3b6ce2b3-5790-4b5f-808c-dc5f526f6c6e" />
+
 *Figure 2: Horizontal bar chart comparing the top 5 and bottom 5 U.S. states by their combined overweight and obesity percentages relative to the national average. Source: [CDC BRFSS Dataset via Data.gov](https://catalog.data.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system?from_hint=eyJxIjoiTnV0cml0aW9uLCBQaHlzaWNhbCBBY3Rpdml0eSwgYW5kIE9iZXNpdHkgLSBCZWhhdmlvcmFsIFJpc2sgRmFjdG9yIFN1cnZlaWxsYW5jZSBTeXN0ZW0iLCJzb3J0IjoicmVsZXZhbmNlIn0%3D).*
 
 ## Summary, Ethical Concerns, and Reporting Process
