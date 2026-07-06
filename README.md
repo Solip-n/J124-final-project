@@ -1,5 +1,5 @@
 # How Health Lifestyle Habits Predict America’s Excess Weight Crisis
-I picked this topic since health is very personal to me as I see good health as a prerequisite for everything we ought to accomplish in this life and poor health as a waste of potential.
+I picked this topic since health is very personal to me. I see good health as a prerequisite for everything we ought to accomplish in this life, and poor health as a loss of potential.
 
 ## Dataset Source and Challenges
 The dataset in this project originates from the Center for Disease Control and Prevention (CDC), specifically titled “Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System” (BRFSS). It’s a massive telephone survey that aims to track health behaviors, chronic conditions, as well as how people take care of themselves across all 50 states and U.S. territories. The CDC is very reputable as it comes directly from the U.S. government. The downside is that all of this data is self reported. As a result of human bias, respondents tend to underreport their actual weight and exaggerate their consumption of fruits/vegetables along with how much they exercise. It also risks missing populations who are too busy to answer the phone or who refuse to answer the survey although the CDC has already applied statistical weighting to try and counteract this.
