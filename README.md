@@ -1,39 +1,11 @@
 # How Health Lifestyle Habits Predict America’s Excess Weight Crisis
 
-I picked this topic since health is very personal to me; I see good health as a prerequisite for everything we ought to accomplish in this life, and poor health as a waste of potential.
+I picked this topic since health is very personal to me as I see good health as a prerequisite for everything we ought to accomplish in this life and poor health as a waste of potential.
 
----
+The dataset in this project originates from the Center for Disease Control and Prevention (CDC), specifically titled “Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System” (BRFSS). It’s a massive telephone survey that aims to track health behaviors, chronic conditions, as well as how people take care of themselves across all 50 states and U.S. territories. The CDC is very reputable as it comes directly from the U.S. government. The downside is that all of this data is self reported. As a result of human bias, respondents tend to underreport their actual weight and exaggerate their consumption of fruits/vegetables along with how much they exercise. It also risks missing populations who are too busy to answer the phone or who refuse to answer the survey although the CDC has already applied statistical weighting to try and counteract this.
 
-## The Dataset
-The dataset in this project originates from the Center for Disease Control and Prevention (CDC), specifically titled “Nutrition, Physical Activity, and Obesity - Behavioral Risk Factor Surveillance System” (BRFSS). 
 
-It’s a massive telephone survey that aims to track health behaviors, chronic conditions, and how people take care of themselves across all 50 states and U.S. territories. 
+I cleaned the data using a google Colab notebook. The original dataset was incredibly messy and the numbers were split by age, gender, and education. The first thing I did was to filter the dataset to look only at the rows where Stratification1 was equal to ‘Total’. This removed all the demographic splits and gave me the overall state totals. Different health questions were asked in different years which meant that a lot of rows were missing values. I ran a pivot operation using LocationDesc as my rows and for every unique CDC question asked over the years for my columns. I then averaged out the percentages over multiple years by using the mean operation. I thought about using median but decided to go with mean instead because state level percentages as large as this doesn’t have extreme outliers. Using median would have just taken the middle and ignored the rest which would eliminate any subtle year to year shifts. Lastly, I decided to combine both the overweight and obesity columns to get a clearer picture since when I separated them, the correlations seemed off and unintuitive. There was a positive correlation between overweight rates and exercise when they were separated which was misleading since overweight individuals were more likely to be using exercise to lose weight while obese individuals may be less likely to do so.
 
-### Limitations & Biases
-While the CDC is highly reputable as an official U.S. government source, there are a few built-in downsides to the data:
-* **Self-Reported Data:** Due to human bias, respondents tend to underreport their actual weight and exaggerate their consumption of fruits/vegetables along with how much they exercise.
-* **Sampling Bias:** The survey risks missing populations who are too busy to answer the phone or who refuse to participate altogether (though the CDC applies statistical weighting to try and counteract this).
+The data shows how much of America’s excess weight crisis can be linked to lifestyle interventions. The data here seems to be outdated as the combined overweight and obesity rate in America seems to have jumped from the 65.6% shown in our dataset to 72.4% in the most recent estimates. The ethical concern here is that people may use this as a way to body shame people or make jokes about the southern states and their cuisine. However, obesity is more of a systemic and culture issue in the U.S. and not a failure of an individual’s willpower. Reporting on these numbers while excluding the context may cause harm by downplaying the systemic issues and emphasizing a lack of personal willpower when this is far from the case. The additional things we would have to do in order to make this a more complete and ethical story is to actually investigate the local environment. For example, Colorado is one of the states with the lowest rates of obesity and that is mainly due to the fact active recreation is a social norm there as they have parks, hiking trails, and bike lanes that are ingrained into their cities which increases the likelihood that commuting is the default option. We also have to take into account the socioeconomic factors as poverty and low income is associated with excess weight. It is no coincidence that the southern states with the highest obesity rates also happen to be the states with the highest poverty rates.
 
----
-
-## Data Cleaning & Methodology
-I cleaned the data using a Google Colab notebook. Because the original dataset was incredibly messy—with numbers fragmented by age, gender, and education—I took the following steps:
-
-1. **Demographic Filtering:** I filtered the dataset to look only at rows where Stratification1 was equal to 'Total'. This removed the individual demographic splits and isolated the overall state totals.
-2. **Pivoting the Data:** Different health questions were asked in different years, leaving many rows missing values. I executed a pivot operation using LocationDesc (states/territories) as my rows, and turned every unique CDC question asked over the years into individual columns.
-3. **Aggregating with Mean:** I averaged out the percentages over multiple years using the mean operation. I chose mean over median because large state-level percentages do not contain extreme outliers. Using the median would have simply grabbed the middle value and ignored the rest, eliminating subtle year-to-year shifts.
-4. **Combining Metrics:** I decided to combine both the overweight and obesity columns to get a clearer picture. When kept separate, the correlations were unintuitive and misleading (e.g., there was a confusing positive correlation between overweight rates and exercise, likely because overweight individuals were actively exercising to lose weight, whereas obese individuals faced higher barriers to doing so).
-
----
-
-## Insights & Ethical Considerations
-
-The data clearly shows how much of America’s excess weight crisis can be linked to lifestyle interventions. However, it is worth noting that the figures here appear slightly outdated; the combined overweight and obesity rate in America has jumped from the 65.6% shown in this dataset to 72.4% in recent estimates.
-
-> ### Ethical Concern
-> There is a risk that people may use these numbers to body-shame individuals or make jokes about Southern states and their cuisine. Obesity is a systemic and cultural issue in the U.S., not a failure of personal willpower. Reporting on these numbers without this vital context downplays systemic flaws and unfairly places the blame on individuals.
-
-### Moving the Story Forward
-To make this a more complete and ethical piece of journalism, we must look at local environments and socioeconomic factors:
-* **Built Environment:** Colorado consistently tracks among the states with the lowest obesity rates. This is largely because active recreation is a social norm backed by infrastructure—cities are deeply ingrained with parks, hiking trails, and bike lanes, making active commuting a default option.
-* **Socioeconomic Factors:** Poverty and low income are strictly associated with excess weight. It is no coincidence that the Southern states scoring the highest in obesity rates also happen to be the states struggling with the highest poverty rates in the nation.
